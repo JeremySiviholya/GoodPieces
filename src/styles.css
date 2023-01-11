@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
@@ -43,16 +47,20 @@ main {
 }
 
 .fiches {
-	flex: 1;
+	@apply flex-1 m-[8px] grid grid-cols-3 gap-[4px] rounded
+	/* flex: 1;
 	margin: 8px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 4px;
+	gap: 4px; */
 }
 .fiches article {
-	border: 1px solid black;
-	padding: 4px;
+
+	@apply border border-black  p-[4px] rounded ;
+	/* border: 1px solid black;
+	padding: 4px; */
 }
+
 .fiches article img {
 	display: block;
 	margin-left: auto;
@@ -65,4 +73,7 @@ main {
 }
 .fiches article h2 {
 	text-align: center;
+}
+.btn{
+	@apply py-1 px-3 bg-blue-400 rounded border hover:bg-blue-300 hover:transition duration-500 flex items-center
 }
