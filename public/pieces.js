@@ -65,8 +65,57 @@ boutonFilterD.addEventListener('click',()=>{
     console.log(piecesSansD);
 });
 
-const boutonPiecesD=document.querySelector('.btn-map');
-boutonPiecesD.addEventListener('click',()=>{
-    const piecesDetail=pieces.map((piece)=>piece.nom)
-    console.log(piecesDetail);
-})
+const boutonDetail=document.querySelector('.btn-map')
+boutonDetail.addEventListener('click',()=>{
+    const pieceDetail=pieces.map(piece=>piece.nom)
+    console.log(pieceDetail);
+});
+
+
+const noms=pieces.map(piece=>piece.nom);
+for(let i=pieces.length -1;i>=0;i-=1)
+{
+    if(pieces[i].prix>35)
+    {
+        noms.splice(i,1);
+    }
+}
+
+const pieceAbordable=document.createElement('ul');
+
+for(let i=0;i<noms.length;i+=1)
+{
+    const elementAb=document.createElement('li');
+    elementAb.innerText=noms[i];
+    pieceAbordable.appendChild(elementAb);
+}
+
+document.querySelector('.abordables').appendChild(pieceAbordable);
+
+
+const nomsDisponible=pieces.map(piece=>piece.nom);
+const prisDisponible=pieces.map(piece=>piece.prix);
+
+for(let i=pieces.length -1;i>=0;i-=1)
+{
+    if(pieces[i].disponibilite == false)
+    {
+        nomsDisponible.splice(i,1);
+        prisDisponible.splice(i,1);
+    }
+}
+
+
+const pieceDisponible=document.createElement('ul');
+
+for(let i=0;i<nomsDisponible.length;i+=1)
+{
+    const el=document.createElement('li');
+    el.innerText=`${nomsDisponible[i]} - ${prisDisponible[i]} €`;
+    pieceDisponible.appendChild(el);
+}
+
+document.querySelector('.disponible').appendChild(pieceDisponible);
+
+
+document.querySelector('.fiches').innerHTML='';

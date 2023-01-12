@@ -35,30 +35,20 @@ main {
 }
 
 .filtres {
-	border-radius: 4px;
-	box-shadow: 0px 0px 4px gray;
-	margin: 8px;
-	padding: 8px;
-	min-width: 300px;
-	min-height: 400px;
+
+	@apply rounded shadow-lg m-[8px] p-[8px] min-w-[300px] min-h-[400px]	
 }
 .filtres h3 {
-	text-align: center;
+	@apply text-center
 }
 
 .fiches {
-	@apply flex-1 m-[8px] grid grid-cols-3 gap-[4px] rounded
-	/* flex: 1;
-	margin: 8px;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 4px; */
+	@apply flex-1 m-[8px] grid grid-cols-4 gap-[4px] rounded
+	
 }
 .fiches article {
 
 	@apply border border-black  p-[4px] rounded ;
-	/* border: 1px solid black;
-	padding: 4px; */
 }
 
 .fiches article img {
@@ -72,7 +62,7 @@ main {
 	margin-bottom: 4px;
 }
 .fiches article h2 {
-	text-align: center;
+	@apply text-center
 }
 .btn{
 	@apply py-1 px-3 bg-blue-400 rounded border hover:bg-blue-300 hover:transition duration-500 flex items-center
