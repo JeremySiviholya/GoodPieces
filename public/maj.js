@@ -45,8 +45,8 @@ genererPieces(pieces);
 const boutonTrier=document.querySelector('.btn-trier');
 boutonTrier.addEventListener('click',()=>{
     const pieceOrdonees=Array.from(pieces);
-    pieceOrdonees.sort((a,b)=>a.prix - b.prix);
-    
+    pieceOrdonees.sort((a,b)=>a.prix -b.prix);
+    document.querySelector('.fiches').innerHTML='';
     genererPieces(pieceOrdonees);
 });
 
@@ -54,6 +54,14 @@ boutonTrier.addEventListener('click',()=>{
 const boutonFilter=document.querySelector('.btn-filtrer')
 boutonFilter.addEventListener('click',()=>{
     const elementFilter=pieces.filter(piece=>piece.prix > 35);
-    
+    document.querySelector('.fiches').innerHTML='';
     genererPieces(elementFilter);
+});
+
+
+const inputFilter=document.querySelector('#prix-max');
+inputFilter.addEventListener('input',function(){
+    const pieceFilter=pieces.filter(piece=>piece.prix<inputFilter.value);
+    //document.querySelector('.fiches').innerHTML='';
+    genererPieces(pieceFilter);
 })
