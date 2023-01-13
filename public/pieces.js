@@ -1,5 +1,9 @@
+import { ajoutListenersAvis } from "./avis.js";
 const reponse=await fetch('../data/pieces-autos.json');
 const pieces=await reponse.json();
+
+
+
 
 function genererPieces(pieces)
 {
@@ -27,6 +31,11 @@ function genererPieces(pieces)
     
         const disponibilite=document.createElement('p');
         disponibilite.innerText=article.disponibilite ? 'en stock' : 'rupture de stock';
+
+        const avisBouton = document.createElement("button");
+        avisBouton.dataset.id = article.id;
+        avisBouton.textContent = "Afficher les avis";
+       // avisBouton.style.color(red)
     
         sectionFiches.appendChild(piecesElement);
     
@@ -35,8 +44,11 @@ function genererPieces(pieces)
         piecesElement.appendChild(prixPieces);
         piecesElement.appendChild(categorie);
         piecesElement.appendChild(disponibilite);
+        piecesElement.appendChild(avisBouton);
         
     }
+    ajoutListenersAvis();
+    
 }
 
 genererPieces(pieces);
@@ -128,5 +140,6 @@ inputFilter.addEventListener('input',()=>{
     document.querySelector('.fiches').innerHTML='';
     genererPieces(piecesFilter);
 })
+
 
 
