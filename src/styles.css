@@ -18,7 +18,8 @@ header {
 	align-items: center;
 	margin-bottom: 16px;
 	padding: 8px;
-	background-color: #7451eb;
+	/* background-color: #7451eb; */
+	@apply bg-gradient-to-r from-blue-500 to-blue-300;
 	text-align: center;
 	color: white;
 }
@@ -50,7 +51,7 @@ main {
 }
 .fiches article {
 
-	@apply border border-black  p-[4px] rounded ;
+	@apply border shadow-sm   p-[4px] rounded ;
 }
 
 .fiches article img {
