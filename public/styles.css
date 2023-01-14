@@ -515,14 +515,27 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.rounded-sm{
+  border-radius: 0.125rem;
+}
+
 .bg-blue-300{
   --tw-bg-opacity: 1;
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+.bg-gradient-to-r{
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.from-blue-700{
+  --tw-gradient-from: #1d4ed8;
+  --tw-gradient-to: rgb(29 78 216 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-blue-300{
+  --tw-gradient-to: #93c5fd;
 }
 
 .filter{
@@ -534,7 +547,7 @@ body {
   margin: auto;
   padding: 16px;
   font-family: 'Montserrat', sans-serif;
-  background-image: url(../images/design\ \(26\).jpg);
+  background-image: url(../images/design\ \(75\).jpg);
 }
 
 header {
@@ -567,6 +580,8 @@ main {
   min-height: 400px;
   min-width: 300px;
   border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   padding: 8px;
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -584,11 +599,6 @@ main {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 4px;
   border-radius: 0.25rem;
-  background-image: linear-gradient(to right, var(--tw-gradient-stops));
-  --tw-gradient-from: #1d4ed8;
-  --tw-gradient-to: rgb(29 78 216 / 0);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  --tw-gradient-to: #93c5fd;
 }
 
 .fiches article{

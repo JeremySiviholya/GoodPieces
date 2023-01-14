@@ -101,6 +101,7 @@ for(let i=pieces.length -1;i>=0;i-=1)
 }
 
 const pieceAbordable=document.createElement('ul');
+pieceAbordable.style.color="white";
 
 for(let i=0;i<noms.length;i+=1)
 {
@@ -126,6 +127,7 @@ for(let i=pieces.length -1;i>=0;i-=1)
 
 
 const pieceDisponible=document.createElement('ul');
+pieceDisponible.style.color='white';
 
 for(let i=0;i<nomsDisponible.length;i+=1)
 {

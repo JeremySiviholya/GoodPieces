@@ -8,7 +8,8 @@ body {
 	margin: auto;
 	padding: 16px;
 	font-family: 'Montserrat', sans-serif;
-	background-image: url(../images/design\ \(26\).jpg);
+	background-image: url(../images/design\ \(75\).jpg);
+	
 }
 
 header {
@@ -36,7 +37,7 @@ main {
 
 .filtres {
 
-	@apply rounded shadow-lg m-[8px] p-[8px] min-w-[300px] min-h-[400px];	
+	@apply rounded shadow-lg m-[8px] p-[8px] min-w-[300px] min-h-[400px] bg-white;	
 }
 .filtres h3 {
 	text-align: center
@@ -44,7 +45,7 @@ main {
 
 .fiches {
 	
-	 @apply flex-1 m-[8px] grid grid-cols-4 gap-[4px] rounded bg-gradient-to-r from-blue-700 to-blue-300;
+	 @apply flex-1 m-[8px] grid grid-cols-4 gap-[4px] rounded;
 	
 }
 .fiches article {
