@@ -3,7 +3,6 @@ export function ajoutListenersAvis() {
 
     for (let i = 0; i < piecesElements.length; i++) {
       piecesElements[i].addEventListener("click", async function (event) {
-           /* ... */
 
            const id = event.target.dataset.id;
            const reponse=await fetch(`http://localhost:8081/pieces/${id}/avis`);
