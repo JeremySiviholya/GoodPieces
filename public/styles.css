@@ -542,10 +542,6 @@ video {
   --tw-gradient-to: #93c5fd;
 }
 
-.p-7{
-  padding: 1.75rem;
-}
-
 .p-2{
   padding: 0.5rem;
 }
@@ -558,18 +554,9 @@ video {
   text-align: center;
 }
 
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
-.text-\[15px\]{
-  font-size: 15px;
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-\[14px\]{
