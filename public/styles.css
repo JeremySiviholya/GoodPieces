@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 /*
 ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
 */
@@ -419,7 +421,7 @@ video {
   display: none;
 }
 
-*, ::before, ::after {
+*, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -466,7 +468,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-::backdrop {
+::backdrop{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
   --tw-translate-x: 0;
@@ -513,12 +515,17 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.bg-blue-300 {
+.bg-blue-300{
   --tw-bg-opacity: 1;
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
 }
 
-.filter {
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.filter{
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
@@ -527,6 +534,7 @@ body {
   margin: auto;
   padding: 16px;
   font-family: 'Montserrat', sans-serif;
+  background-image: url(../images/design\ \(26\).jpg);
 }
 
 header {
@@ -554,7 +562,7 @@ main {
   flex-direction: row;
 }
 
-.filtres {
+.filtres{
   margin: 8px;
   min-height: 400px;
   min-width: 300px;
@@ -566,19 +574,24 @@ main {
 }
 
 .filtres h3 {
-  text-align: center;
+  text-align: center
 }
 
-.fiches {
+.fiches{
   margin: 8px;
   display: grid;
   flex: 1 1 0%;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 4px;
   border-radius: 0.25rem;
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+  --tw-gradient-from: #1d4ed8;
+  --tw-gradient-to: rgb(29 78 216 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #93c5fd;
 }
 
-.fiches article {
+.fiches article{
   border-radius: 0.25rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -598,11 +611,11 @@ main {
   margin-bottom: 4px;
 }
 
-.fiches article h2 {
+.fiches article h2{
   text-align: center;
 }
 
-.btn {
+.btn{
   display: flex;
   align-items: center;
   border-radius: 0.25rem;
@@ -616,7 +629,7 @@ main {
   transition-duration: 500ms;
 }
 
-.btn:hover {
+.btn:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(147 197 253 / var(--tw-bg-opacity));
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;

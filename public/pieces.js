@@ -7,10 +7,11 @@ function genererPieces(pieces)
 {
     for(let i=0;i<pieces.length;i+=1){
         const article=pieces[i];
+        
     
         const sectionFiches=document.querySelector('.fiches');
         const piecesElement=document.createElement('article');
-    
+        piecesElement.style.backgroundColor='white';
     
         const imagePieces=document.createElement('img');
         imagePieces.src=article.image;
@@ -33,6 +34,9 @@ function genererPieces(pieces)
         const avisBouton = document.createElement("button");
         avisBouton.dataset.id = article.id;
         avisBouton.textContent = "Afficher les avis";
+        avisBouton.style.color="aqua";
+        
+        
         
     
         sectionFiches.appendChild(piecesElement);
