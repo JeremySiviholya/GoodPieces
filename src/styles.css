@@ -54,12 +54,25 @@ main {
 	@apply border shadow-sm   p-[4px] rounded ;
 }
 
+.f{
+	@apply bg-blue-500 px-3 py-1 rounded-lg  hover:translate-x-1 text-white;
+}
+
+.g{
+	@apply bg-zinc-800 text-white
+}
+
+.h{
+	@apply transition duration-300;
+}
+
 .fiches article img {
 	
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 200px;
+	@apply flex justify-center items-center
 }
 .fiches article p {
 	margin-top: 4px;
@@ -69,5 +82,9 @@ main {
 	@apply text-center
 }
 .btn{
-	@apply py-1 px-3 bg-blue-400 rounded border hover:bg-blue-300 hover:transition duration-500 flex items-center
+	@apply py-1 px-3 bg-blue-400 rounded text-white border hover:bg-blue-300 hover:transition duration-500 flex items-center
+}
+
+.l{
+	@apply bg-white
 }

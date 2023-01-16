@@ -12,9 +12,8 @@ function genererPieces(pieces)
     
         const sectionFiches=document.querySelector('.fiches');
         const piecesElement=document.createElement('article');
-        piecesElement.style.backgroundColor='white';
-        piecesElement.style.transition='300ms';
-    
+        piecesElement.classList.add('g')
+
         const imagePieces=document.createElement('img');
         imagePieces.src=article.image;
     
@@ -36,12 +35,14 @@ function genererPieces(pieces)
         const avisBouton = document.createElement("button");
         avisBouton.dataset.id = article.id;
         avisBouton.textContent = "Afficher les avis";
-        avisBouton.style.color="gray";
+        avisBouton.classList.add('f')
         
-    
+        const sectionImages=document.createElement('div');
+        sectionImages.appendChild(imagePieces);
+        sectionImages.classList.add('l')
         sectionFiches.appendChild(piecesElement);
     
-        piecesElement.appendChild(imagePieces)
+        piecesElement.appendChild(sectionImages)
         piecesElement.appendChild(nomPieces);
         piecesElement.appendChild(prixPieces);
         piecesElement.appendChild(categorie);
@@ -54,6 +55,8 @@ function genererPieces(pieces)
 }
 
 genererPieces(pieces);
+
+
 
 
 const boutonTrier=document.querySelector('.btn-trier');
