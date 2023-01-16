@@ -69,7 +69,7 @@ boutonTrier.addEventListener('click',()=>{
 
 const boutonFilter=document.querySelector('.btn-filtrer');
 boutonFilter.addEventListener('click',()=>{
-    const piecesFilter=pieces.filter((piece)=>piece.prix);
+    const piecesFilter=pieces.filter((piece)=>piece.prix>=35);
     
     document.querySelector('.fiches').innerHTML='';
     genererPieces(piecesFilter);
