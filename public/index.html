@@ -23,8 +23,19 @@
 				<button class="btn-triero btn">Trier par prix decroissant</button>
 				<br>
 				<button class="btn-undes btn">Filtrer les pièces  sans description</button>
-                <br>
-				<input type="range" id="prix-max" min="0" max="60"  step="5">
+				<br>
+				<input type="range" name="prix-max" id="prix-max" min="0" max="60" step="5">
+				<!-- code a ajouter -->
+				<h3>Ajouter un avis</h3>
+				<form class="formulaire-avis">
+				    Identifiant de la pièce :<br>
+				    <input type="number" name="piece-id" class="bg-white border-white shadow-lg"><br>
+				    Nom d'utilisateur :<br>
+				    <input type="text" name="utilisateur" class="bg-white border-white shadow-lg"><br>
+				    Avis :<br>
+				    <input type="text" name="commentaire" class="bg-white border-white shadow-lg"><br>
+				    <button>Envoyer</button>
+				</form>	
 			</section>
 
 			<!-- Fiches produits -->
