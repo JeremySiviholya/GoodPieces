@@ -21,7 +21,9 @@
   "dependencies": {
     "autoprefixer": "^10.4.13",
     "http-server": "^14.1.1",
-    "postcss": "^8.4.21",
+    "postcss": "^8.4.21"
+  },
+  "devDependencies": {
     "tailwindcss": "^3.2.4"
   }
 }
