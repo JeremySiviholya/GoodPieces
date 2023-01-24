@@ -20,6 +20,7 @@
   "homepage": "https://github.com/OpenClassrooms-Student-Center/7697016-Front-End.1#readme",
   "dependencies": {
     "autoprefixer": "^10.4.13",
+    "chart.js": "^4.2.0",
     "http-server": "^14.1.1",
     "postcss": "^8.4.21"
   },

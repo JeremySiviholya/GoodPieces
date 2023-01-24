@@ -1,4 +1,4 @@
-import { ajoutListenersAvis, ajoutListnerEnvoyerAvis } from "./avis.js";
+import { ajoutListenersAvis, ajoutListnerEnvoyerAvis,afficherGraphiqueAvis } from "./avis.js";
 // Récupération des pièces depuis le fichier JSON
 const reponse = await fetch('../data/pieces-autos.json');
 const pieces = await reponse.json();
@@ -154,5 +154,5 @@ inputFilter.addEventListener('input',()=>{
     genererPieces(piecesFilter);
 })
 
-
+await afficherGraphiqueAvis();
 
