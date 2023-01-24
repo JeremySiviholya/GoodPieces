@@ -5,6 +5,7 @@ export function ajoutListenersAvis() {
     {
       piecesElement[i].addEventListener('click', async (event)=>
       {
+        
         const id=event.target.dataset.id;
         const reponse=await fetch(`http://localhost:8081/pieces/${id}/avis`);
         const avis=await reponse.json();
@@ -22,29 +23,25 @@ export function ajoutListenersAvis() {
     }
 }
 
-export function ajoutListenerEnvoyerAvis() {
-      const formulaireAvis = document.querySelector(".formulaire-avis");
-      formulaireAvis.addEventListener("submit",function (event) {
-        event.preventDefault();
+export function ajoutListnerEnvoyerAvis()
+{
+  const formulaireAvis=document.querySelector('.formulaire-avis');
+  formulaireAvis.addEventListener('submit',(event)=>{
+    event.preventDefault();
 
-        // Création de l’objet du nouvel avis.
-      const avis = {
+    const avis={
       pieceId: parseInt(event.target.querySelector("[name=piece-id]").value),
-      utilisateur: event.target.querySelector("[name=utilisateur").value,
-      commentaire: event.target.querySelector("[name=commentaire]").value,
-      nbEtoiles:event.target.querySelector("[name=nbEtoiles]").value,
-      };
+      utilisateur: event.target.querySelector('[name=utilisateur]').value,
+      commentaire:event.target.querySelector('[name=commentaire]').value,
+    }
 
-      // Création de la charge utile au format JSON
-      const chargeUtile = JSON.stringify(avis);
+    const chargeUtile=JSON.stringify(avis);
 
-      // Appel de la fonction fetch avec toutes les informations nécessaires
-        fetch("http://localhost:8081/avis", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: chargeUtile
-      });
-
-  });
+    fetch('http://localhost:8081/avis',{
+      method: "POST",
+      headers:{"Content-Type": "application/json"},
+      body:chargeUtile
+    })
+  })
 }
 
