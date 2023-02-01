@@ -4,8 +4,7 @@ export function ajoutListenersAvis() {
     for(let i=0;i<piecesElement.length;i+=1)
     {
       piecesElement[i].addEventListener('click', async (event)=>
-      {
-        
+      {        
         const id=event.target.dataset.id;
         const reponse=await fetch(`http://localhost:8081/pieces/${id}/avis`);
         const avis=await reponse.json();

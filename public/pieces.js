@@ -154,5 +154,13 @@ inputFilter.addEventListener('input',()=>{
     genererPieces(piecesFilter);
 })
 
+const searchInput=document.querySelector('.searchProduct')
+searchInput.addEventListener('keyup',()=>{
+    const searchElement=pieces.filter(piece=>piece.prix <=searchInput.value);
+    document.querySelector('.fiches').innerHTML='';
+    genererPieces(searchElement);
+  
+})
+
 await afficherGraphiqueAvis();
 
