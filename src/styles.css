@@ -9,6 +9,10 @@ body {
 	padding: 16px;
 	font-family: 'Montserrat', sans-serif;
 	background-image: url(../images/design\ \(75\).jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	backdrop-filter: blur(3px);
+
 	
 }
 
@@ -38,20 +42,34 @@ main {
 
 .filtres {
 
-	@apply rounded shadow-lg m-[8px] p-[8px] min-w-[300px] min-h-[400px] bg-white;	
+	@apply rounded shadow-lg m-[8px] p-[8px]  max-h-[550px] overflow-y-hidden bg-white;	
 }
+
+.filtres::-webkit-scrollbar{
+	width: 10px;
+}
+/* 
+.filtres::-webkit-scrollbar-track{
+	background-color: white;
+}
+
+.filtres::-webkit-scrollbar-thumb{
+	background-color: red;
+} */
+	
+
 .filtres h3 {
 	text-align: center
 }
 
 .fiches {
 	
-	 @apply flex-1 m-[8px] grid grid-cols-4 gap-[4px] rounded;
+	 @apply flex-1 m-[8px] grid grid-cols-4 gap-[4px] rounded bg-slate-50 p-4 max-h-[550px] overflow-y-hidden scrollbar-track-slate-300 scrollbar-thumb-slate-400 scrollbar-thin ;
 	
 }
 .fiches article {
 
-	@apply border shadow-sm   p-[4px] rounded ;
+	@apply  shadow-sm max-w-[197px] max-h-[356px]   p-[4px] rounded ;
 }
 
 .f{

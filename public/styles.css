@@ -421,6 +421,11 @@ video {
   display: none;
 }
 
+*{
+  scrollbar-color: initial;
+  scrollbar-width: initial;
+}
+
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -523,10 +528,6 @@ video {
   border-radius: 0.25rem;
 }
 
-.border-none{
-  border-style: none;
-}
-
 .border-white{
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
@@ -535,11 +536,6 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-slate-400{
-  --tw-bg-opacity: 1;
-  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-r{
@@ -558,20 +554,6 @@ video {
 
 .p-2{
   padding: 0.5rem;
-}
-
-.p-5{
-  padding: 1.25rem;
-}
-
-.px-5{
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-}
-
-.py-2{
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .pb-5{
@@ -621,6 +603,10 @@ body {
   padding: 16px;
   font-family: 'Montserrat', sans-serif;
   background-image: url(../images/design\ \(75\).jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 header {
@@ -655,8 +641,10 @@ main {
 
 .filtres{
   margin: 8px;
+  max-height: 550px;
   min-height: 400px;
   min-width: 300px;
+  overflow-y: hidden;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -666,6 +654,26 @@ main {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.scrollbar.filtres{
+  overflow-y: hidden;
+}
+
+.scrollbar-thin.filtres{
+  overflow-y: hidden;
+}
+
+.filtres::-webkit-scrollbar{
+  width: 7px;
+}
+
+.filtres::-webkit-scrollbar-track{
+  background: white;
+}
+
+.filtres::-webkit-scrollbar-thumb{
+  background: red;
+}
+
 .filtres h3 {
   text-align: center
 }
@@ -673,15 +681,99 @@ main {
 .fiches{
   margin: 8px;
   display: grid;
+  max-height: 550px;
   flex: 1 1 0%;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 4px;
+  overflow-y: hidden;
   border-radius: 0.25rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+  padding: 1rem;
+}
+
+.scrollbar.fiches{
+  overflow-y: hidden;
+}
+
+.fiches{
+  --scrollbar-track: initial;
+  --scrollbar-thumb: initial;
+  --scrollbar-corner: initial;
+  --scrollbar-track-hover: var(--scrollbar-track);
+  --scrollbar-thumb-hover: var(--scrollbar-thumb);
+  --scrollbar-corner-hover: var(--scrollbar-corner);
+  --scrollbar-track-active: var(--scrollbar-track-hover);
+  --scrollbar-thumb-active: var(--scrollbar-thumb-hover);
+  --scrollbar-corner-active: var(--scrollbar-corner-hover);
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  overflow: overlay;
+}
+
+.fiches.overflow-x-hidden{
+  overflow-x: hidden;
+}
+
+.fiches.overflow-y-hidden{
+  overflow-y: hidden;
+}
+
+.scrollbar-thin.fiches{
+  overflow-y: hidden;
+}
+
+.fiches::-webkit-scrollbar-track{
+  background-color: var(--scrollbar-track);
+}
+
+.fiches::-webkit-scrollbar-thumb{
+  background-color: var(--scrollbar-thumb);
+}
+
+.fiches::-webkit-scrollbar-corner{
+  background-color: var(--scrollbar-corner);
+}
+
+.fiches::-webkit-scrollbar-track:hover{
+  background-color: var(--scrollbar-track-hover);
+}
+
+.fiches::-webkit-scrollbar-thumb:hover{
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+.fiches::-webkit-scrollbar-corner:hover{
+  background-color: var(--scrollbar-corner-hover);
+}
+
+.fiches::-webkit-scrollbar-track:active{
+  background-color: var(--scrollbar-track-active);
+}
+
+.fiches::-webkit-scrollbar-thumb:active{
+  background-color: var(--scrollbar-thumb-active);
+}
+
+.fiches::-webkit-scrollbar-corner:active{
+  background-color: var(--scrollbar-corner-active);
+}
+
+.fiches{
+  scrollbar-width: thin;
+}
+
+.fiches::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+
+.fiches{
+  --scrollbar-track: #cbd5e1;
+  --scrollbar-thumb: #94a3b8;
 }
 
 .fiches article{
   border-radius: 0.25rem;
-  border-width: 1px;
   padding: 4px;
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
