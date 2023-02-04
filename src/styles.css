@@ -12,7 +12,7 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	backdrop-filter: blur(3px);
-
+    @apply scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-slate-300;
 	
 }
 
@@ -42,20 +42,15 @@ main {
 
 .filtres {
 
-	@apply rounded shadow-lg m-[8px] p-[8px]  max-h-[550px] overflow-y-hidden bg-white;	
-}
-
-.filtres::-webkit-scrollbar{
-	width: 10px;
-}
-/* 
-.filtres::-webkit-scrollbar-track{
-	background-color: white;
+	@apply rounded shadow-lg m-[8px] p-[8px]  max-h-[550px] overflow-y-hidden bg-white scrollbar-thin scrollbar-track-white scrollbar-thumb-slate-300;	
 }
 
 .filtres::-webkit-scrollbar-thumb{
-	background-color: red;
-} */
+	@apply rounded-lg
+}
+.fiches::-webkit-scrollbar-thumb{
+	border-radius: 50px;
+}
 	
 
 .filtres h3 {
@@ -64,7 +59,7 @@ main {
 
 .fiches {
 	
-	 @apply flex-1 m-[8px] grid grid-cols-4 gap-[4px] rounded bg-slate-50 p-4 max-h-[550px] overflow-y-hidden scrollbar-track-slate-300 scrollbar-thumb-slate-400 scrollbar-thin ;
+	 @apply flex-1 m-[8px] grid grid-cols-4 gap-[4px] rounded max-h-[550px] overflow-y-hidden scrollbar-thin scrollbar-track-blue-300 scrollbar-thumb-slate-300;
 	
 }
 .fiches article {
