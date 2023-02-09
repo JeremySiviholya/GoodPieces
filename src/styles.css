@@ -8,11 +8,11 @@ body {
 	margin: auto;
 	padding: 16px;
 	font-family: 'Montserrat', sans-serif;
-	background-image: url(../images/design\ \(75\).jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	backdrop-filter: blur(3px);
-    @apply scrollbar-thin scrollbar-track-slate-200 scrollbar-thumb-slate-300;
+	/* background-image: url(../images/design\ \(75\).jpg); */
+	/* background-repeat: no-repeat;
+	background-size: cover; */
+
+    @apply bg-[rgb(30,30,42)] opacity-[0.9];
 	
 }
 
